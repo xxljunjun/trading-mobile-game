@@ -44,3 +44,28 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 # 五、安装上拉加载和下拉刷新组件
 + npm install --save mescroll.js
+
+# 六、安装i18n国际化
++ npm install vue-i18n --save
++ //在i18n.js中
+import Vue from 'vue';
+import VueI18n from 'vue-i18n';
+import zh from '@/i18n/zh';
+import en from '@/i18n/en';
+Vue.use(VueI18n);
+const messages = {
+	zh, // 这是zh: zh的简写，后面同理
+	en,
+};
+export default new VueI18n({
+	locale: 'zh',
+	messages,
+});
++ //在main.js中
+import i18n from '@/utils/i18n';
+new App(
+	i18n,
+).$mount()
++ 在i18n文件夹中
+zh.js
+en.js
