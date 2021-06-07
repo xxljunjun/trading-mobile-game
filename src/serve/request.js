@@ -17,6 +17,7 @@ function service(options = {}) {
 		//成功
 		options.success = (res) => {
 
+			resolved(res);
 			// if (Number(res.data.code) == 200) {  //请求成功
 			// 	resolved(res.data.data);
 			// } else {
