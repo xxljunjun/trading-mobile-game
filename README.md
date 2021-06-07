@@ -36,4 +36,10 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 + keytool -importkeystore -srckeystore ./yourapp.keystore -destkeystore ./yourapp.keystore -deststoretype JKS
 + keytool -list -v -keystore ./HBuilder.keystore
 
-# 四、
+# 四、安装sass
++ npm install node-sass --save-dev
++ npm install sass-loader --save-dev 
++ npm install style-loader --save-dev
+
+# 五、安装上拉加载和下拉刷新组件
++ npm install --save mescroll.js
