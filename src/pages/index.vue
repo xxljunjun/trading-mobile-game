@@ -108,7 +108,7 @@ export default {
         textSuccess: '刷新完成',
         beforeEndDelay: 1000,
         textColor: '#000',
-        offset: 160,
+        offset: 120,
         bgColor: 'url(/static/junjun/bg.jpg) 0 75rpx/100% 3%',
         // textErr:"",
         use: true, // 是否启用下拉刷新; 默认true

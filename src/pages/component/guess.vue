@@ -138,30 +138,29 @@ export default {
   methods: {
     changeIndex(e) {
       //方法一
-      // console.log('00000000', e)
-      // var slider = document.getElementsByClassName('sliders')[0]
-      // console.log('111111', slider)
-      // if (e.detail.current == 0) {
-      //   slider.style.left = 0
-      // } else if (e.detail.current == 1) {
-      //   slider.style.left = '50px'
-      // } else if (e.detail.current == 2) {
-      //   slider.style.left = '100px'
-      // }
+      console.log('00000000', e)
+      var slider = document.getElementsByClassName('sliders')[0]
+      if (e.detail.current == 0) {
+        slider.style.left = 0
+      } else if (e.detail.current == 1) {
+        slider.style.left = '50px'
+      } else if (e.detail.current == 2) {
+        slider.style.left = '100px'
+      }
 
       //方法二
-        let mystyle = this.$refs.sliders.$el.style
-        // console.log('11', mystyle)
-        if (e.detail.current == 0) {
-          // console.log('000')
-          mystyle.left = 0
-        } else if (e.detail.current == 1) {
-          // console.log('111')
-          mystyle.left = 25 + 'px'
-        } else if (e.detail.current == 2) {
-          // console.log('2222')
-          mystyle.left = 55 + 'px'
-        }
+      // let mystyle = this.$refs.sliders.$el.style
+      // // console.log('11', mystyle)
+      // if (e.detail.current == 0) {
+      //   // console.log('000')
+      //   mystyle.left = 0
+      // } else if (e.detail.current == 1) {
+      //   // console.log('111')
+      //   mystyle.left = 25 + 'px'
+      // } else if (e.detail.current == 2) {
+      //   // console.log('2222')
+      //   mystyle.left = 55 + 'px'
+      // }
     },
   },
   components: {},
