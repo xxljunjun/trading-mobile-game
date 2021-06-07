@@ -212,6 +212,8 @@ export default {
     }
   },
   mounted() {
+    // console.log('语音切换', this.$i18n)
+    console.log('vuex', this.$store)
     this.scrollEvent()
     // window.onscroll = this.handScroll // 不能加（），否则会返回undefined
   },
