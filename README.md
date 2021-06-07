@@ -29,7 +29,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 # 三、生成android-apk证书
 + Android平台打包发布apk应用，需要使用数字证书（.keystore文件）进行签名，用于表明开发者身份。
-+ 需要微信者开发工具
++ 需要安装微信者开发工具
 + 安装JRE环境  //可从Oracle官方下载jre安装包：https://www.oracle.com/technetwork/java/javase/downloads/index.html
 + set PATH=%PATH%;"C:\Program Files\Java\jdk-16.0.1\bin"
 + keytool -genkey -alias yourapp.keystore -keyalg RSA -sigalg SHA1WithRSA -validity 20000 -keysize 1024 -keystore yourapp.keystore -v

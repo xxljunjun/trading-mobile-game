@@ -59,6 +59,7 @@ export default {
   width: 45rpx;
 }
 .tabBar {
+  box-sizing: border-box;
   z-index: 999;
   padding: 0 50rpx;
   position: fixed;
