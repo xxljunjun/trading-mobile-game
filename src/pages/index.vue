@@ -89,6 +89,7 @@ import Guess from './component/guess'
 import TopGame from './component/topGame'
 import MoreGame from './component/moreGame'
 import TabBar from './component/tabBar-buttom'
+import { getWeather } from '@/serve/api.js'
 export default {
   components: {
     Guess,
@@ -212,8 +213,30 @@ export default {
     }
   },
   mounted() {
-    // console.log('语音切换', this.$i18n)
+    console.log('语音切换', this.$i18n)
     console.log('vuex', this.$store)
+    //方法一未封装统一的request
+    uni.request({
+      url:
+        'http://localhost:8080/he/freeweather?city=beijing&appkey=7a85fc9df58cd155f764e033a257d879',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded', //自定义请求头信息
+      },
+      //请求成功后返回
+      success: (res) => {
+        // 请求成功之后将数据给Info
+        console.log('0000000000000', res)
+      },
+    })
+    //方法二统一封装request
+    // let params = {
+    //   city: '广州',
+    //   appkey: '7a85fc9df58cd155f764e033a257d879',
+    // }
+    // getWeather(params).then((res) => {
+    //   console.log('天气', res)
+    // })
+
     this.scrollEvent()
     // window.onscroll = this.handScroll // 不能加（），否则会返回undefined
   },

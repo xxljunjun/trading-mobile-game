@@ -71,5 +71,21 @@
     },
     "mp-qq": {
         "usingComponents": true
+    },
+    "h5": {
+        "devServer": {
+            "port": 8080,
+            "disableHostCheck": true,
+            "proxy": {
+                "/he": {
+                    "target": "https://way.jd.com",
+                    "changeOrigin": true,
+                    "secure": false,
+                    "pathRewrite": {
+                        "/he": "/he"
+                    }
+                }
+            }
+        }
     }
 }

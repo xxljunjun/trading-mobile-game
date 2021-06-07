@@ -66,6 +66,7 @@ import i18n from '@/utils/i18n';
 new App(
 	i18n,
 ).$mount()
+Vue.prototype.$i18nMsg = i18n.messages[i18n.locale] //挂载上去this.$i18nMsg.xxx去访问
 + 在i18n文件夹中
 zh.js
 en.js
@@ -115,3 +116,27 @@ const app = new Vue({
 app.$mount()
 
 # 八、安装vue-router
++ npm install vue-router
++ 在main.js中
+import VueRouter from 'vue-router'
+Vue.use(VueRouter)
+
+# 九、封装uni.request(options)请求
++ @/serve/request.js
++ 解决跨域问题manifest.json
+"h5": {
+        "devServer": {
+            "port": 8080,
+            "disableHostCheck": true,
+            "proxy": {
+                "/he": {
+                    "target": "https://way.jd.com",
+                    "changeOrigin": true,
+                    "secure": false,
+                    "pathRewrite": {
+                        "/he": "/he"
+                    }
+                }
+            }
+        }
+    }
