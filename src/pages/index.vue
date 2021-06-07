@@ -427,6 +427,8 @@ export default {
       z-index: 11;
       overflow: hidden;
       .lb {
+        box-sizing: border-box;
+        padding: 0;
         .item {
           display: flex;
           align-items: center;

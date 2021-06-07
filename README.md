@@ -35,6 +35,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 + keytool -genkey -alias yourapp.keystore -keyalg RSA -sigalg SHA1WithRSA -validity 20000 -keysize 1024 -keystore yourapp.keystore -v
 + keytool -importkeystore -srckeystore ./yourapp.keystore -destkeystore ./yourapp.keystore -deststoretype JKS
 + keytool -list -v -keystore ./HBuilder.keystore
+***window+R启用管理员权限操作***
 
 # 四、安装sass
 + npm install node-sass@4.14.1 --save-dev
