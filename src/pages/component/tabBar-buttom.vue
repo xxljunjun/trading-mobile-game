@@ -18,7 +18,7 @@
     </view>
     <view class="btn" @click="goToTabBar(5)">
       <image src="/static/junjun/tao_49.jpg" class="icon" />
-      <view>我i的</view>
+      <view>我的</view>
     </view>
   </view>
 </template>
@@ -33,21 +33,30 @@ export default {
   components: {},
   methods: {
     goToTabBar(num) {
-      console.log(num)
+      let url = ''
       switch (num) {
         case 1:
+          url = 'index'
           break
         case 2:
+          url = 'buy'
           break
         case 3:
+          url = 'sell'
           break
         case 4:
+          url = 'message'
           break
         case 5:
+          url = 'mine'
           break
         default:
           break
       }
+      console.log(url)
+      uni.navigateTo({
+        url: url,
+      })
     },
   },
 }

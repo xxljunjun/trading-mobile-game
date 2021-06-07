@@ -1,10 +1,11 @@
 <template>
-  <view class="mine">111111</view>
+  <view class="mine">3333333<TabBar /></view>
 </template>
 
 <script>
+import TabBar from '@/pages/component/tabBar-buttom'
 export default {
-  components: {},
+  components: { TabBar },
   data() {
     return {}
   },

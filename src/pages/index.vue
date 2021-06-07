@@ -85,10 +85,10 @@
 </template>
 
 <script>
-import Guess from './component/guess'
-import TopGame from './component/topGame'
-import MoreGame from './component/moreGame'
-import TabBar from './component/tabBar-buttom'
+import Guess from '@/pages/component/guess'
+import TopGame from '@/pages/component/topGame'
+import MoreGame from '@/pages/component/moreGame'
+import TabBar from '@/pages/component/tabBar-buttom'
 import { getWeather } from '@/serve/api.js'
 export default {
   components: {
